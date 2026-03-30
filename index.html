@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #1e1e1e;
+            font-family: "Courier New", monospace;
+            color: #d4d4d4;
+        }
+
+        .log-container {
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            box-sizing: border-box;
+            white-space: pre-line;
+        }
+
+        .log-entry {
+            margin: 5px 0;
+        }
+
+        .timestamp {
+            color: #6a9955;
+        }
+
+        .info {
+            color: #4fc1ff;
+        }
+
+        .warn {
+            color: #dcdcaa;
+        }
+
+        .error {
+            color: #f44747;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="log-container">
+        <div class="log-entry">
+            <span class="timestamp">[12:00:01]</span>
+            <span class="info">INFO</span> App started successfully.
+        </div>
+
+        <div class="log-entry">
+            <span class="timestamp">[12:00:03]</span>
+            <span class="warn">WARN</span> Low memory detected.
+        </div>
+
+        <div class="log-entry">
+            <span class="timestamp">[12:00:05]</span>
+            <span class="error">ERROR</span> Unable to connect to server.
+        </div>
+
+        <div class="log-entry">
+            <span class="timestamp">[12:00:10]</span>
+            <span class="info">INFO</span> Retrying...
+        </div>
+    </div>
+</body>
+</html>
